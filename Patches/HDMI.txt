@@ -1,0 +1,21 @@
+#5870M HDMI Audio patch probably other AMD cards as well when modified.
+#change layout-id to match your audio
+#Must also use GPU.txt
+
+into device label HDAU parent_adr 0x00030000 remove_entry;
+into device label PEG3 insert
+begin
+Device (HDAU)\n
+{\n
+    Name (_ADR, 0x01)\n
+    Method (_DSM, 4, NotSerialized)\n
+    {\n
+        If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+        Return (Package()\n
+        {\n
+            "layout-id", Buffer() { 0x0c, 0x00, 0x00, 0x00 },\n
+            "hda-gfx", Buffer() { "onboard-2" },\n
+        })\n
+    }\n
+}\n
+end;
