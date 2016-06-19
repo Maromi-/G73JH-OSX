@@ -112,6 +112,10 @@
 	<string>AppleHDA 911.fc1, Copyright © 2000-2014 Apple Inc. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.2.0a1</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.1</string>
 		<key>com.apple.driver.AppleHDAController</key>
 		<string>1.7.2a1</string>
 		<key>com.apple.driver.DspFuncLib</key>
