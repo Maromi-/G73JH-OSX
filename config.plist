@@ -13,8 +13,30 @@
 			<key>Patches</key>
 			<array>
 				<dict>
+                                        <key>Comment</key>
+                                        <string>change EC0 to EC</string>
+                                        <key>Disabled</key>
+                                        <false/>
+                                        <key>Find</key>
+                                        <data>RUMwXw==</data>
+                                        <key>Replace</key>
+                                        <data>RUNfXw==</data>
+                                </dict>
+				<dict>
+                                        <key>Comment</key>
+                                        <string>change EHC1 to EH01</string>
+					<key>Disabled</key>
+					<true/>
+                                        <key>Find</key>
+                                        <data>RUhDMQ==</data>
+                                        <key>Replace</key>
+                                        <data>RUgwMQ==</data>
+                                </dict>
+				<dict>
 					<key>Comment</key>
-					<string>Change EHC2 to EH02 for 10.11+</string>
+					<string>Change EHC2 to EH02</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>RUhDMg==</data>
 					<key>Replace</key>
@@ -24,7 +46,7 @@
 			<key>Fixes</key>
 			<dict>
 				<key>FixRegions_10000000</key>
-				<true/>
+				<false/>
 				<key>NewWay_80000000</key>
 				<true/>
 			</dict>
@@ -37,7 +59,8 @@
 		<false/>
 		<key>SortedOrder</key>
 		<array>
-			<string>SSDT-0.aml</string>
+			<string>#SSDT-UIAC.aml</string>
+			<string>#SSDT-USBX.aml</string>
 		</array>
 		<key>DropTables</key>
 		<array>
@@ -51,7 +74,7 @@
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
-			<true/>
+			<false/>
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
@@ -84,9 +107,9 @@
 	</array>
 	<key>Devices</key>
 	<dict>
-		<key>Audio</key>
+		<key>#Audio</key>
 		<dict>
-			<key>Inject</key>
+			<key>#Inject</key>
 			<string>1</string>
 		</dict>
 		<key>FakeID</key>
@@ -115,13 +138,14 @@
 			<key>Inject</key>
 			<false/>
 		</dict>
-		<key>UseIntelHDMI</key>
+		<key>#UseIntelHDMI</key>
 		<false/>
 	</dict>
 	<key>GUI</key>
 	<dict>
 		<key>Hide</key>
 		<array>
+			<string>Preboot</string>
 			<string>Windows</string>
 			<string>\EFI\BOOT\BOOTX64.EFI</string>
 		</array>
@@ -227,18 +251,18 @@
 		<key>#MountEFI</key>
 		<string>Yes</string>
 		<key>CsrActiveConfig</key>
-		<string>0x1</string>
+		<string>0x67</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>07/26/10</string>
+		<string>09/23/15</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP61.88Z.0057.B0C.1007261552</string>
+		<string>MBP61.88Z.0057.B11.1509232013</string>
 		<key>Board-ID</key>
 		<string>Mac-F22589C8</string>
 		<key>BoardManufacturer</key>
