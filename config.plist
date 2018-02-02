@@ -8,33 +8,131 @@
 		<dict>
 			<key>Debug</key>
 			<false/>
-			<key>DropOEM_DSM</key>
-			<false/>
 			<key>Patches</key>
 			<array>
 				<dict>
-                                        <key>Comment</key>
-                                        <string>change EC0 to EC</string>
-                                        <key>Disabled</key>
-                                        <false/>
-                                        <key>Find</key>
-                                        <data>RUMwXw==</data>
-                                        <key>Replace</key>
-                                        <data>RUNfXw==</data>
-                                </dict>
-				<dict>
-                                        <key>Comment</key>
-                                        <string>change EHC1 to EH01</string>
+					<key>Comment</key>
+					<string>change EC0 to EC</string>
 					<key>Disabled</key>
-					<true/>
-                                        <key>Find</key>
-                                        <data>RUhDMQ==</data>
-                                        <key>Replace</key>
-                                        <data>RUgwMQ==</data>
-                                </dict>
+					<false/>
+					<key>Find</key>
+					<data>RUMwXw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change EHC2 to EH02</string>
+					<string>change SBRG to LPCB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U0JSRw==</data>
+					<key>Replace</key>
+					<data>TFBDQg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _OSI to XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X09TSQ==</data>
+					<key>Replace</key>
+					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GPRW to XPRW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVw==</data>
+					<key>Replace</key>
+					<data>WFBSVw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change IDE0 to SATA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>SURFMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change BIFA to XBIF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>QklGQQ==</data>
+					<key>Replace</key>
+					<data>WEJJRg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SMBR to XMBR</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U01CUg==</data>
+					<key>Replace</key>
+					<data>WE1CUg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change SMBW to XMBW</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>U01CVw==</data>
+					<key>Replace</key>
+					<data>WE1CVw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change ECSB to XCSB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUNTQg==</data>
+					<key>Replace</key>
+					<data>WENTQg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change TACH to XACH</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>VEFDSA==</data>
+					<key>Replace</key>
+					<data>WEFDSA==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EHC1 to EH01 doesn&apos;t work on 5-series</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>RUhDMQ==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EHC2 to EH02 doesn&apos;t work on 5-series</string>
 					<key>Disabled</key>
 					<true/>
 					<key>Find</key>
@@ -42,12 +140,28 @@
 					<key>Replace</key>
 					<data>RUgwMg==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change USB to UHC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>VVNC</data>
+					<key>Replace</key>
+					<data>VUhD</data>
+				</dict>
 			</array>
 			<key>Fixes</key>
 			<dict>
-				<key>FixRegions_10000000</key>
-				<false/>
-				<key>NewWay_80000000</key>
+				<key>FixHeaders</key>
+				<true/>
+				<key>FixIPIC</key>
+				<true/>
+				<key>FixRTC</key>
+				<true/>
+				<key>FixTMR</key>
+				<true/>
+				<key>FixHPET</key>
 				<true/>
 			</dict>
 			<key>Name</key>
@@ -56,19 +170,18 @@
 			<false/>
 		</dict>
 		<key>HaltEnabler</key>
-		<false/>
-		<key>SortedOrder</key>
-		<array>
-			<string>#SSDT-UIAC.aml</string>
-			<string>#SSDT-USBX.aml</string>
-		</array>
+		<true/>
 		<key>DropTables</key>
 		<array>
 			<dict>
 				<key>Signature</key>
-				<string>SSDT</string>
+				<string>ECDT</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>#SSDT</string>
 				<key>TableId</key>
-				<string>CpuPm</string>
+				<string>#CpuPm</string>
 			</dict>
 		</array>
 		<key>SSDT</key>
@@ -87,9 +200,9 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode-1</string>
+		<string>dart=0 kext-dev-mode=1</string>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>MacOSX</string>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>Debug</key>
@@ -133,9 +246,11 @@
 		</dict>
 		<key>USB</key>
 		<dict>
-			<key>FixOwnership</key>
-			<false/>
 			<key>Inject</key>
+			<false/>
+			<key>AddClockID</key>
+			<false/>
+			<key>FixOwnership</key>
 			<false/>
 		</dict>
 		<key>#UseIntelHDMI</key>
@@ -146,6 +261,7 @@
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
+			<string>Recovery</string>
 			<string>Windows</string>
 			<string>\EFI\BOOT\BOOTX64.EFI</string>
 		</array>
@@ -198,8 +314,8 @@
 		<string>02000000400000000901000010000005000800000402000000000000210301021000000010000000000100001000020800040000040700000073000021030303</string>
 		<key>AppleRTC</key>
 		<true/>
-		<key>AsusAICPUPM</key>
-		<false/>
+		<key>AppleIntelCPUPM</key>
+		<true/>
 		<key>KernelPm</key>
 		<false/>
 		<key>KextsToPatch</key>
@@ -244,6 +360,44 @@
 				<key>Replace</key>
 				<data>aQLsEA==</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleBacklight</string>
+				<key>Find</key>
+				<data>RiV1VCUwNHgA</data>
+				<key>Replace</key>
+				<data>RiV1VHh4eHgA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>port limit usb</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBEHCIPCI</string>
+				<key>Find</key>
+				<data>//8Q</data>
+				<key>Replace</key>
+				<data>//8N</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>disable intelhub 8087:20</string>
+				<key>Disabled</key>
+				<true/>
+				<key>InfoPlistPatch</key>
+				<true/>
+				<key>Find</key>
+				<data>CQkJPGtleT5pZFByb2R1Y3RBcnJheTwva2V5Pg0KCQkJPGFycmF5Pg0KCQkJCTxpbnRlZ2VyPjMyPC9pbnRlZ2VyPg0KCQkJCTxpbnRlZ2VyPjM2PC9pbnRlZ2VyPg0KCQkJPC9hcnJheT4NCg==</data>
+				<key>Name</key>
+				<string>AppleUSBHub</string>
+				<key>Replace</key>
+				<data>CQkJPGtleT5pZFByb2R1Y3RBcnJheTwva2V5Pg0KCQkJPGFycmF5Pg0KCQkJCTxpbnRlZ2VyPjM2PC9pbnRlZ2VyPg0KCQkJCTxpbnRlZ2VyPjM2PC9pbnRlZ2VyPg0KCQkJPC9hcnJheT4NCg==</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -283,6 +437,8 @@
 		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro6,2</string>
+		<key>#FirmwareFeatures</key>
+		<string></string>
 		<key>SerialNumber</key>
 		<string>##use your own##</string>
 		<key>Trust</key>
