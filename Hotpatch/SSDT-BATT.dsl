@@ -25,9 +25,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "BATT", 0)
     External(_SB.PCI0.LPCB.EC.DA21, FieldUnitObj)
     External(_SB.PCI0.LPCB.EC.RRAM, MethodObj)
     External(_SB.PCI0.LPCB.EC.DECF, IntObj)
-    
-    Device(_SB.PCI0.MCHC) { Name(_ADR, 0x00000000) }    
-    
+        
     // This is an override for battery methods that access EC fields
     // larger than 8-bit.
     Scope (_SB.PCI0.LPCB.EC)

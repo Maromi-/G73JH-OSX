@@ -14,5 +14,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
             //"MaximumBootBeepVolume", 77,
         })
     }
+    
+    Device(_SB.PCI0.MCHC) { Name(_ADR, 0x00000000) }    
 }
 
